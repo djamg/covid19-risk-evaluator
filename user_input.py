@@ -1,3 +1,5 @@
+import riskcalculator
+import time
 scenes = [
     "Visiting a Grocery Store",
     "Hanging out with 2 people outdoor",
@@ -9,6 +11,7 @@ scenes = [
 distances = ["3 feet", "6 feet", "12 feet"]
 masks = ["No one wearing", "You are wearing", "All are wearing"]
 talks = ["Not talking at all", "Normal conversation", "Talking Loudly"]
+user_input = []
 
 
 def printOnCalled(list_of_items, input_statement):
@@ -17,9 +20,15 @@ def printOnCalled(list_of_items, input_statement):
         count += 1
         print(str(count)+".", item)
     scene_select = input(input_statement)
+    user_input.append(scene_select)
 
 
 printOnCalled(scenes, "Please select the scenario: ")
-printOnCalled(distances, "Enter the distance maintained: ")
 printOnCalled(masks, "Select how the masks are being worn: ")
 printOnCalled(talks, "Are people talking?: ")
+printOnCalled(distances, "Enter the distance maintained: ")
+print(user_input)
+
+riskcalculator.calculate(
+    scene=int(user_input[0]), mask=int(user_input[1]), talk=int(user_input[2]), distance=int(user_input[3]))
+time.sleep(5)
