@@ -1,15 +1,22 @@
 import csv
+import time
 
 list1 = []
-newlist = []
 
-with open("data.csv", 'r', newline='') as csvfile:
-    read = csv.reader(csvfile)
-    for i in read:
-        list1.append(i)
+
+def createlist():
+    with open("data.csv", 'r', newline='') as csvfile:
+        read = csv.reader(csvfile)
+        for i in read:
+            list1.append(i)
+
+
+createlist()
+time.sleep(1)
 
 
 def calculate(scene, mask, talk, distance):
+    newlist = []
     count = 0
     while count < 3:
         newlist.append(list1[(scene*3)+count-1])
@@ -19,9 +26,13 @@ def calculate(scene, mask, talk, distance):
     talking = (talk*3)
     risk = newlist[mask-1][talking+distance-3]
     risk_percentage = float(risk)/10000
-    print("Risk of getting COVID-19 is", risk,
-          "in a million that is", risk_percentage, "percent")
+    return [risk, risk_percentage]
+    # return[("Risk of getting COVID-19 is", risk,
+    #        "in a million that is", risk_percentage, "percent")]
 
 
-#calculate(4, 3, 2, 2)
+# calculate(1, 3, 3, 3)
+# calculate(6, 3, 3, 3)
+# calculate(2, 3, 3, 3)
+
 # list[row][column]
