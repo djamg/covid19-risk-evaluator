@@ -49,13 +49,13 @@ label {
   padding-right: 5px;
 }
 
-imput[type="submit"] {
+input[type="submit"] {
   min-width: 150px;
   max-width: 180px;
   justify-content: center;
   align-items: center;
   width: auto;
-  margin-top: 10px;
+  margin-top: 5px;
   padding-top: 5px;
   padding-bottom: 5px;
   font-size: large;
@@ -63,4 +63,9 @@ imput[type="submit"] {
   background-color: white;
   border-radius: 20px;
   box-shadow: 5px 5px 5px #868686;
+}
+
+.alert {
+  font-size: x-large;
+  align-content: center;
 }
