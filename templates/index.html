@@ -1,12 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-137884587-2"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-137884587-2");
+    </script>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../static/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../static/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../static/favicon-16x16.png"
+    />
+    <link rel="manifest" href="../static/site.webmanifest" />
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
+    <meta
+      name="description"
+      content="A Calculator to evaluate COVID risk from daily scenarios"
+    />
+    <meta
+      name="keywords"
+      content="Covid-19, Risk, Calculator, Evaluator, Amogh, Aradhya, amogharadhya.me, monitoringsystems.tech, covid19.monitoringsystems.tech"
+    />
+    <meta name="author" content="Amogh Aradhya" />
+    <meta property="og:title" content="Covid-19 Risk Evaluator" />
+    <meta
+      property="og:description"
+      content="A Calculator to evaluate COVID risk from daily scenarios"
+    />
+    <meta
+      property="og:image"
+      content="https://cdn.pixabay.com/photo/2020/04/24/11/44/coronavirus-5086544_1280.png"
+    />
+    <meta property="og:url" content="https://covid19.monitoringsystems.tech" />
 
     <!-- Bootstrap CSS -->
     <link
@@ -24,10 +75,14 @@
     <title>Covid-19 Risk Evaluator</title>
   </head>
   <body>
-    <h1 class="text-center bg-white">Covid-19 Risk Evaluator</h1>
+    <h1 class="text-center bg-white">
+      Covid-19 Risk Evaluator<img
+        src="../static/coronavirus-5107832_1280.png"
+      />
+    </h1>
     <div class="container text-center">
-      <form action="/send" method="POST">
-        <label for="scene">Choose a scene</label>
+      <form action="/" method="POST">
+        <label for="scene">Choose a scenario</label>
         <select id="scene" name="scene">
           <option value="1">Visiting a Grocery Store</option>
           <option value="2">Hanging out with 2 people outdoor</option>
@@ -65,10 +120,18 @@
           <option value="2">6 feet</option>
           <option value="3">10 feet</option>
         </select>
-        <input type="submit" value="Evaluate" id="calc_btn" />
+        <button type="submit" formmethod="post">Evaluate</button>
       </form>
       <div class="alert">{{ result }}</div>
     </div>
+    <footer>
+      <p>
+        Made by <a href="https://amogharadhya.me"> Amogh👋.</a>
+        Information is obtained from newspapers and research papers.
+        <br />Wanna help build this or have ideas?
+        <a href="https://amogharadhya.me">Contact me.</a>
+      </p>
+    </footer>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
