@@ -27,7 +27,7 @@ printOnCalled(scenes, "Please select the scenario: ")
 printOnCalled(masks, "Select how the masks are being worn: ")
 printOnCalled(talks, "Are people talking?: ")
 printOnCalled(distances, "Enter the distance maintained: ")
-print(user_input)
+# print(user_input)
 
 riskcalculator.calculate(
     scene=int(user_input[0]), mask=int(user_input[1]), talk=int(user_input[2]), distance=int(user_input[3]))

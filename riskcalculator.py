@@ -2,7 +2,6 @@ import csv
 
 list1 = []
 newlist = []
-newlist1 = []
 
 with open("data.csv", 'r', newline='') as csvfile:
     read = csv.reader(csvfile)
@@ -19,7 +18,9 @@ def calculate(scene, mask, talk, distance):
     # print(newlist[mask-1][3])
     talking = (talk*3)
     risk = newlist[mask-1][talking+distance-3]
-    print("Risk of getting CoVID-19 is", risk, "in a million")
+    risk_percentage = float(risk)/10000
+    print("Risk of getting COVID-19 is", risk,
+          "in a million that is", risk_percentage, "percent")
 
 
 #calculate(4, 3, 2, 2)

@@ -1,0 +1,41 @@
+body {
+  background-color: whitesmoke;
+}
+
+.heading {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  color: aliceblue;
+  font-family: Tahoma, Geneva, sans-serif;
+  font-size: large;
+  background-color: tomato;
+  padding-bottom: 15px;
+  text-shadow: yellow;
+}
+
+h1 {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: xx-large;
+}
+
+.container {
+  padding-top: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+select {
+  height: 30px;
+  font-size: large;
+  margin-bottom: 30px;
+}
+
+label {
+  font-size: x-large;
+  padding-right: 5px;
+}

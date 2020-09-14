@@ -1,9 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Covid 19 Risk Calculator</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+
+    <title>Covid-19 Risk Evaluator</title>
   </head>
-  <body></body>
+  <body>
+    <h1 class="text-center bg-white">Covid-19 Risk Evaluator</h1>
+    <div class="container text-center">
+      <form action="/send" method="POST">
+        <label for="scene">Choose a scene:</label>
+        <select id="scene">
+          <option value="1">Visiting a Grocery Store</option>
+          <option value="2">Hanging out with 2 people outdoor</option>
+          <option value="3">
+            Attending an indoor party, wedding with 50 people for 3 hours
+          </option>
+          <option value="4">
+            Car ride with driver for 30 minutes with windows open
+          </option>
+          <option value="5">
+            Eating in a restaurant indoors with 15 people for 90 minutes
+          </option>
+          <option value="6">
+            Taking a plane ride with 20 people for 150 minutes
+          </option>
+        </select>
+
+        <label for="mask">Mask situation:</label>
+        <select id="mask">
+          <option value="1">No one wearing</option>
+          <option value="2">You are wearing</option>
+          <option value="3">All are wearing</option>
+        </select>
+
+        <label for="talk">Mask situation:</label>
+        <select id="talk">
+          <option value="1">Not talking at all</option>
+          <option value="2">Normal conversation</option>
+          <option value="3">Talking Loudly</option>
+        </select>
+      </form>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>

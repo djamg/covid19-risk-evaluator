@@ -1,0 +1,20 @@
+User will input 4 values
+
+1. Scene
+2. Mask
+3. Talk
+4. Distance
+
+-------------------
+risk calculator has to take in the above mentioned 4 values and tablulate it
+
+tabulation happens from excel and the respective cell is returned back
+#user_input(range(scene*3,scene*3+2))
+1 => position(3rd row)+3)
+2 => position(6th row)+3)
+create a new list within this range -> newlist
+
+---------------
+newlist[mask]
+create newlist2
+-----------------
