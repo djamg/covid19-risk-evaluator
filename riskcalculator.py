@@ -5,7 +5,7 @@ list1 = []
 
 
 def createlist():
-    with open("data.csv", 'r', newline='') as csvfile:
+    with open("./data.csv", 'r', newline='') as csvfile:
         read = csv.reader(csvfile)
         for i in read:
             list1.append(i)
