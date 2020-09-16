@@ -15,7 +15,7 @@ createlist()
 time.sleep(1)
 
 
-def calculate(scene, mask, talk, distance):
+def calculate(scene=1, mask=1, talk=1, distance=1):
     newlist = []
     count = 0
     while count < 3:
